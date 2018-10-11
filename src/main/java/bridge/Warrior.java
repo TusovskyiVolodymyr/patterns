@@ -1,9 +1,18 @@
 package bridge;
 
 public abstract class Warrior {
+    private String name;
     private int health;
     private Weapon weapon;
     private boolean isAlive;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getHealth() {
         return health;
@@ -28,5 +37,15 @@ public abstract class Warrior {
 
     public void fight() {
         weapon.shout();
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + "{" +
+                "name='" + name + '\'' +
+                ", health=" + health +
+                ", weapon=" + weapon +
+                ", isAlive=" + isAlive +
+                '}';
     }
 }
