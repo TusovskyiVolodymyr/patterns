@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.plane;
 
 public enum PlaneType {
     REACTIVE("Reactive"), PROPPELLER("Propeller");

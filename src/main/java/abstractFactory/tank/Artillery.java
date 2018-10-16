@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.tank;
 
 public class Artillery extends Tank {
     public Artillery(int maxSpeed, int maxDamage, int protection) {

@@ -1,24 +1,13 @@
 package abstractFactory;
 
+import abstractFactory.MilitaryFactory;
+import abstractFactory.tank.Artillery;
+import abstractFactory.tank.HeavyTank;
+import abstractFactory.tank.LightTank;
+import abstractFactory.tank.Tank;
+
 public class TankFactory implements MilitaryFactory {
     public TankFactory() {
-    }
-
-    public static Tank getTank(TankType tankType) {
-        Tank tank = null;
-        switch (tankType) {
-            case HEAVY: {
-                tank = new HeavyTank();
-            }
-            case LIGHT: {
-                tank = new LightTank();
-            }
-            case ARTILLERY: {
-                tank = new Artillery();
-            }
-            return tank;
-        }
-        return null;
     }
 
     @Override
@@ -27,15 +16,17 @@ public class TankFactory implements MilitaryFactory {
         switch (s) {
             case "Heavy": {
                 tank = new HeavyTank();
+                break;
             }
             case "Light": {
                 tank = new LightTank();
+                break;
             }
             case "Artillery": {
                 tank = new Artillery();
+                break;
             }
-            return tank;
         }
-        return null;
+        return tank;
     }
 }

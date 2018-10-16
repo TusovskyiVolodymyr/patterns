@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.tank;
 
 public class HeavyTank extends Tank {
 

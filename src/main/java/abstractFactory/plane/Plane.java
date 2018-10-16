@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.plane;
 
 public abstract class Plane {
     private int maxFlyightHeight;

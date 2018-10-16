@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.plane;
 
 public class ReactivePlane extends Plane {
     public ReactivePlane(int maxFlyightHeight, int maxSpeed) {

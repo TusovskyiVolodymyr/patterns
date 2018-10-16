@@ -1,4 +1,4 @@
-package abstractFactory;
+package abstractFactory.tank;
 
 public enum TankType {
     HEAVY("Heavy"), LIGHT("Light"), ARTILLERY("Artillery");

@@ -1,21 +1,12 @@
 package abstractFactory;
 
+import abstractFactory.MilitaryFactory;
+import abstractFactory.plane.Plane;
+import abstractFactory.plane.PropellerPlane;
+import abstractFactory.plane.ReactivePlane;
+
 public class PlaneFactory implements MilitaryFactory {
     public PlaneFactory() {
-    }
-
-    public static Plane getPlane(PlaneType planeType) {
-        Plane plane = null;
-        switch (planeType) {
-            case REACTIVE: {
-                plane = new ReactivePlane();
-            }
-            case PROPPELLER: {
-                plane = new PropellerPlane();
-            }
-            return plane;
-        }
-        return null;
     }
 
     @Override

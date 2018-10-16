@@ -1,14 +1,17 @@
-package abstractFactory;
+package abstractFactory.tank;
 
 public abstract class Tank {
     private int maxSpeed;
     private int maxDamage;
     private int protection;
+    private static int count = 1;
 
     public Tank(int maxSpeed, int maxDamage, int protection) {
+        System.out.println("Tanks created:" + count + " | tank type: " + this.getClass().getSimpleName());
         this.maxSpeed = maxSpeed;
         this.maxDamage = maxDamage;
         this.protection = protection;
+        count++;
     }
 
     public Tank() {
