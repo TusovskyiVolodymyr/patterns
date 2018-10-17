@@ -1,6 +1,5 @@
 package abstractFactory;
 
-import abstractFactory.MilitaryFactory;
 import abstractFactory.plane.Plane;
 import abstractFactory.plane.PropellerPlane;
 import abstractFactory.plane.ReactivePlane;

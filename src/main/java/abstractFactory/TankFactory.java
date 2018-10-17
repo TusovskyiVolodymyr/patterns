@@ -1,6 +1,5 @@
 package abstractFactory;
 
-import abstractFactory.MilitaryFactory;
 import abstractFactory.tank.Artillery;
 import abstractFactory.tank.HeavyTank;
 import abstractFactory.tank.LightTank;

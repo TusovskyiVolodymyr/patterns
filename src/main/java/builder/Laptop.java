@@ -8,7 +8,12 @@ public class Laptop {
     private VideoCard videoCard;
     private Display display;
 
-    private Laptop(LaptopBuilder laptopBuilder) {
+    private Laptop(CustomLaptop laptopBuilder) {
+        this.cpu = laptopBuilder.cpu;
+        this.memory = laptopBuilder.memory;
+        this.ram = laptopBuilder.ram;
+        this.videoCard = laptopBuilder.videoCard;
+        this.display = laptopBuilder.display;
     }
 
     public Laptop() {
@@ -65,23 +70,40 @@ public class Laptop {
                 '}';
     }
 
-    public static abstract class LaptopBuilder {
+    public static class CustomLaptop {
+        private CPU cpu;
+        private Memory memory;
+        private Ram ram;
+        private VideoCard videoCard;
+        private Display display;
 
-        protected static Laptop laptop;
+        public CustomLaptop setCpu(CPU cpu) {
+            this.cpu = cpu;
+            return this;
+        }
 
-        public abstract void buildCpu();
+        public CustomLaptop setMemory(Memory memory) {
+            this.memory = memory;
+            return this;
+        }
 
-        public abstract void buildMemory();
+        public CustomLaptop setRam(Ram ram) {
+            this.ram = ram;
+            return this;
+        }
 
-        public abstract void buildDisplay();
+        public CustomLaptop setVideoCard(VideoCard videoCard) {
+            this.videoCard = videoCard;
+            return this;
+        }
 
-        public abstract void buildVideoCard();
+        public CustomLaptop setDisplay(Display display) {
+            this.display = display;
+            return this;
+        }
 
-        public abstract void buildRam();
-
-        public  Laptop build(){
-            laptop = new Laptop(this);
-            return laptop;
+        public Laptop build() {
+            return new Laptop(this);
         }
     }
 }
