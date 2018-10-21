@@ -1,4 +1,5 @@
 package mediator;
 
-public class Client {
+public interface Client {
+    void getTaxiInformation(String s);
 }
