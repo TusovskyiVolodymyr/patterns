@@ -3,10 +3,6 @@ package state;
 public class Commit implements CommitState {
 
     private CommitState commitState;
-    private CommitState newCommit;
-    private CommitState approvedCommit;
-    private CommitState commitWithComments;
-    private CommitState mergedCommit;
 
     public void setCommitState(CommitState commitState) {
         this.commitState = commitState;
@@ -14,10 +10,6 @@ public class Commit implements CommitState {
 
     public Commit() {
         this.commitState = new NewCommit(this);
-        this.approvedCommit = new ApprovedCommit(this);
-        this.newCommit = new NewCommit(this);
-        this.commitWithComments = new CommitWithComments(this);
-        this.mergedCommit = new MergedCommit(this);
     }
 
     @Override
