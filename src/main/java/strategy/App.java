@@ -8,35 +8,35 @@ public class App {
     public static void main(String[] args) {
         Employee employee1 = new Employee.Builder()
                 .setName("John")
-                .setAge(30)
+                .setAge(31)
                 .setLocation("Lviv")
                 .setPosition("Dev")
                 .setSallary(BigDecimal.valueOf(2000))
                 .build();
         Employee employee2 = new Employee.Builder()
                 .setName("Bill")
-                .setAge(30)
+                .setAge(20)
                 .setLocation("Lviv")
                 .setPosition("Dev")
                 .setSallary(BigDecimal.valueOf(2000))
                 .build();
         Employee employee3 = new Employee.Builder()
                 .setName("Nick")
-                .setAge(30)
+                .setAge(40)
                 .setLocation("Lviv")
                 .setPosition("Dev")
                 .setSallary(BigDecimal.valueOf(1000))
                 .build();
         Employee employee4 = new Employee.Builder()
                 .setName("Dave")
-                .setAge(30)
+                .setAge(22)
                 .setLocation("YLviv")
                 .setPosition("Dev")
                 .setSallary(BigDecimal.valueOf(2000))
                 .build();
         Employee employee5 = new Employee.Builder()
                 .setName("Dave")
-                .setAge(30)
+                .setAge(25)
                 .setLocation("New York")
                 .setPosition("Dev")
                 .setSallary(BigDecimal.valueOf(2000))
@@ -48,7 +48,7 @@ public class App {
         employees.add(employee3);
         employees.add(employee4);
         employees.add(employee5);
-        employees.sort(new NameComparator());
+        employees.sort(new AgeComparator());
         System.out.println(employees);
 
         EmployeePicker.printEmployee(employees, new NamePicker(), "i");
