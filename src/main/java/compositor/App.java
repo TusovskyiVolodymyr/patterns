@@ -2,7 +2,7 @@ package compositor;
 
 public class App {
     public static void main(String[] args) {
-        HeadManager head = new HeadManager("Yanov");
+        HeadManager head = new HeadManager("Head");
         ResourceManager rm = new ResourceManager("Roman");
         ResourceManager rm2 = new ResourceManager("Oleg");
         Employee vova = new SubEmployee("Vova");

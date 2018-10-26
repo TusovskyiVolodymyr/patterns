@@ -52,6 +52,6 @@ public class App {
         System.out.println(employees);
 
         EmployeePicker.printEmployee(employees, new NamePicker(), "i");
-        EmployeePicker.printEmployee(employees, new SallaryPicker(), "1000");
+        EmployeePicker.printEmployee(employees, new SalaryPicker(), "1000");
     }
 }

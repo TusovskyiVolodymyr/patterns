@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SallaryPicker implements Picker {
+public class SalaryPicker implements Picker {
     @Override
     public Object getEmployee(List<Employee> employees, String param) {
         List<Employee> employee = employees.stream().filter(employee1 -> employee1.getSallary().equals(BigDecimal.valueOf(Integer.parseInt(param)))).collect(Collectors.toList());

@@ -2,15 +2,20 @@ package proxy;
 
 import java.util.List;
 
-public class RemoteRobot implements Solder {
+public class Proxy {
 
     private Solder explorer;
 
-    public RemoteRobot() {
-        this.explorer = new Explorer();
+    public Proxy() {
+
     }
 
-    @Override
+    private void loadSolder() {
+        if (explorer == null) {
+            explorer = new Explorer();
+        }
+    }
+
     public void investigateEnemyArea(List<String> area) {
         if (area.contains("landmine")) {
             try {
@@ -20,6 +25,7 @@ public class RemoteRobot implements Solder {
                 e.printStackTrace();
             }
         }
+        loadSolder();
         explorer.investigateEnemyArea(area);
     }
 }
